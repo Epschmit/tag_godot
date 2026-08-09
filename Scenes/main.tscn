@@ -169,7 +169,7 @@ texture = ExtResource("2_bo1nx")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_8gbba")
 
-[node name="Stone_Map" type="Node" unique_id=733093432]
+[node name="Main" type="Node" unique_id=733093432]
 
 [node name="Soldier" parent="." unique_id=1695463186 instance=ExtResource("1_jjgbg")]
 position = Vector2(-0.019, -10)
