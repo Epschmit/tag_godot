@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://crykdllublsma"]
+
+[ext_resource type="Texture2D" uid="uid://cdca47oqcqd1y" path="res://Assets/backgrounds/itchio_cloudy_sky_background.png" id="1_28flt"]
+[ext_resource type="Texture2D" uid="uid://bsgly54elhe61" path="res://Assets/UI/Start_Button_Pixel_Art_32x64/Start_Button_Pixel_Art_32x64(1).png" id="2_48xlc"]
+[ext_resource type="Script" uid="uid://rjocnr8c873k" path="res://Scenes/button.gd" id="2_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://cf2nrdt8gyc41" path="res://Assets/UI/Start_Button_Pixel_Art_32x64/Start_Button_Pixel_Art_32x64(2).png" id="3_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://dwsvx051yv046" path="res://Assets/TAG!_Title.png" id="5_n45e2"]
+
+[node name="Main_Menu" type="Control" unique_id=369494897]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=384484664]
+layout_mode = 0
+offset_left = -7.0
+offset_top = -1.0
+offset_right = 1284.0
+offset_bottom = 728.0
+texture = ExtResource("1_28flt")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="." unique_id=418237856]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.448
+anchor_top = 0.47900003
+anchor_right = 0.60200006
+anchor_bottom = 0.619
+offset_left = -0.44000244
+offset_top = 0.1199646
+offset_right = -84.98865
+offset_bottom = -42.96573
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.75, 1.75)
+flat = true
+script = ExtResource("2_ce3w2")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Button" unique_id=1191464649]
+position = Vector2(56.00003, 29.71428)
+scale = Vector2(1.7499995, 1.7499995)
+texture = ExtResource("3_1ehe0")
+
+[node name="Sprite2D" type="Sprite2D" parent="Button" unique_id=1400636890]
+position = Vector2(56.00003, 29.71428)
+scale = Vector2(1.7499995, 1.7499995)
+texture = ExtResource("2_48xlc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1462891357]
+position = Vector2(654, 159)
+scale = Vector2(7.0859375, 5.9453125)
+texture = ExtResource("5_n45e2")
+
+[connection signal="button_down" from="Button" to="Button" method="_on_button_down"]
+[connection signal="button_up" from="Button" to="Button" method="_on_button_up"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

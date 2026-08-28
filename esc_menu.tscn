@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://51m3jdx5uado"]
+
+[ext_resource type="Script" uid="uid://bo2ln4wfx5xx7" path="res://esc_menu.gd" id="1_4yblc"]
+
+[node name="Esc_Menu" type="Control" unique_id=265022079]
+process_mode = 3
+top_level = true
+layout_mode = 3
+anchor_right = 0.24800001
+anchor_bottom = 0.61
+offset_right = 0.55999756
+offset_bottom = -0.2000122
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4yblc")
+
+[node name="Return_To_Main" type="Button" parent="." unique_id=847589595]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -160.5
+offset_right = 46.5
+offset_bottom = 35.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 19
+disabled = true
+text = "Return To Main Menu"
+
+[node name="Cancel_Button" type="Button" parent="." unique_id=1170499480]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -313.0
+offset_right = 47.0
+offset_bottom = -278.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 19
+disabled = true
+text = "Cancel"
+
+[connection signal="button_down" from="Return_To_Main" to="." method="_on_button_button_down"]
+[connection signal="pressed" from="Cancel_Button" to="." method="_on_cancel_button_pressed"]
