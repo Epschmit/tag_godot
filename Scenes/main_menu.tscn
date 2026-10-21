@@ -1,0 +1,295 @@
+[gd_scene format=3 uid="uid://crykdllublsma"]
+
+[ext_resource type="Texture2D" uid="uid://cdca47oqcqd1y" path="res://Assets/backgrounds/itchio_cloudy_sky_background.png" id="1_28flt"]
+[ext_resource type="Script" uid="uid://vserr8mhqqvq" path="res://Scripts/main_menu.gd" id="1_trj04"]
+[ext_resource type="Texture2D" uid="uid://bsgly54elhe61" path="res://Assets/UI/Start_Button_Pixel_Art_32x64/Start_Button_Pixel_Art_32x64(1).png" id="2_48xlc"]
+[ext_resource type="Script" uid="uid://rjocnr8c873k" path="res://Scripts/button.gd" id="2_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://cf2nrdt8gyc41" path="res://Assets/UI/Start_Button_Pixel_Art_32x64/Start_Button_Pixel_Art_32x64(2).png" id="3_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://dwsvx051yv046" path="res://Assets/TAG!_Title.png" id="5_n45e2"]
+[ext_resource type="Script" uid="uid://d17uvfsxwiroe" path="res://Scripts/character_select.gd" id="6_opfnp"]
+[ext_resource type="Script" uid="uid://iiv3jq8uvqt5" path="res://Scripts/character_select_arrows.gd" id="7_yhxw7"]
+[ext_resource type="Script" uid="uid://c6lmgyph4d3v2" path="res://Scripts/character_select_jil.gd" id="8_trj04"]
+[ext_resource type="Script" uid="uid://bfsqpbf2wrwbj" path="res://Scripts/option_1.gd" id="9_vtepg"]
+[ext_resource type="Texture2D" uid="uid://blo5d1y61igan" path="res://Assets/Sprites/Soldier/Soldier.png" id="10_t1dhk"]
+[ext_resource type="Texture2D" uid="uid://c84aami1jnxxd" path="res://Assets/Sprites/Orc/Orc.png" id="11_5egv6"]
+[ext_resource type="Script" uid="uid://nvpe4qtu1yvu" path="res://Scripts/option_2.gd" id="11_8dnnj"]
+[ext_resource type="Texture2D" uid="uid://b6aqtumhw4wri" path="res://Assets/Sprites/Demon_A/Demon_A/Demon_A.png" id="12_vtepg"]
+[ext_resource type="Script" uid="uid://d31nv6bnw0244" path="res://Scripts/option_3.gd" id="13_8dnnj"]
+[ext_resource type="Script" uid="uid://be4dtpykyrvd1" path="res://Scripts/option_1_arrows.gd" id="15_ujyyl"]
+[ext_resource type="Script" uid="uid://c787uvqkvbnb2" path="res://Scripts/option_2_arrows.gd" id="16_mkpwh"]
+[ext_resource type="Script" uid="uid://dlqljiqihh6yp" path="res://Scripts/option_3_arrows.gd" id="17_4nkqq"]
+[ext_resource type="Script" uid="uid://bjx0u1wxobein" path="res://Scripts/option_1jil.gd" id="18_ehtkc"]
+[ext_resource type="Script" uid="uid://d36h733vf4j3c" path="res://Scripts/option_2jil.gd" id="19_6dk6o"]
+[ext_resource type="Script" uid="uid://bs3l4m8ex38lt" path="res://Scripts/option_3jil.gd" id="20_jr6u5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dnnj"]
+atlas = ExtResource("10_t1dhk")
+region = Rect2(141, 231.5, 19, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3bi6"]
+atlas = ExtResource("11_5egv6")
+region = Rect2(243.7483, 40.64455, 22.34935, 16.399708)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyh8j"]
+atlas = ExtResource("12_vtepg")
+region = Rect2(242.7974, 37.61461, 20.472961, 20.389046)
+
+[node name="Main_Menu" type="Control" unique_id=369494897]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_trj04")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=384484664]
+layout_mode = 0
+offset_left = -7.0
+offset_top = -1.0
+offset_right = 1284.0
+offset_bottom = 728.0
+texture = ExtResource("1_28flt")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="." unique_id=418237856]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.448
+anchor_top = 0.47900003
+anchor_right = 0.60200006
+anchor_bottom = 0.619
+offset_left = -29.440002
+offset_top = 231.11996
+offset_right = -113.98865
+offset_bottom = 188.03433
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.75, 1.75)
+flat = true
+script = ExtResource("2_ce3w2")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Button" unique_id=1191464649]
+position = Vector2(56.00003, 29.71428)
+scale = Vector2(1.7499995, 1.7499995)
+texture = ExtResource("3_1ehe0")
+
+[node name="Sprite2D" type="Sprite2D" parent="Button" unique_id=1400636890]
+position = Vector2(56.00003, 29.71428)
+scale = Vector2(1.7499995, 1.7499995)
+texture = ExtResource("2_48xlc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1462891357]
+position = Vector2(654, 159)
+scale = Vector2(7.0859375, 5.9453125)
+texture = ExtResource("5_n45e2")
+
+[node name="CharacterWASD" type="Node" parent="." unique_id=1391803421]
+
+[node name="Option1" type="Button" parent="CharacterWASD" unique_id=654532326]
+visible = false
+offset_left = 304.0
+offset_top = 349.0
+offset_right = 357.0
+offset_bottom = 407.0
+flat = true
+script = ExtResource("9_vtepg")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterWASD/Option1" unique_id=1779911959]
+position = Vector2(24.999996, 27.00001)
+scale = Vector2(2.3684213, 2.3684213)
+texture = SubResource("AtlasTexture_8dnnj")
+
+[node name="Option2" type="Button" parent="CharacterWASD" unique_id=1247721294]
+visible = false
+anchors_preset = -1
+anchor_right = 0.044000003
+anchor_bottom = 0.13800001
+offset_left = 369.0
+offset_top = 349.0
+offset_right = 364.68
+offset_bottom = 307.63998
+flat = true
+script = ExtResource("11_8dnnj")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterWASD/Option2" unique_id=91060472]
+position = Vector2(26.000013, 34.00001)
+scale = Vector2(2.3749986, 2.3749986)
+texture = SubResource("AtlasTexture_m3bi6")
+
+[node name="Option3" type="Button" parent="CharacterWASD" unique_id=1549119839]
+visible = false
+anchors_preset = -1
+anchor_right = 0.22200002
+anchor_bottom = 0.5
+offset_left = 433.0
+offset_top = 349.0
+offset_right = 200.83997
+offset_bottom = 47.0
+toggle_mode = true
+flat = true
+script = ExtResource("13_8dnnj")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterWASD/Option3" unique_id=422041219]
+position = Vector2(25.875004, 31.125004)
+scale = Vector2(2.6125002, 2.6125002)
+texture = SubResource("AtlasTexture_wyh8j")
+
+[node name="Character_Select_WASD" type="Button" parent="CharacterWASD" unique_id=189584045]
+anchors_preset = -1
+anchor_left = 0.303
+anchor_top = 0.485
+anchor_right = 0.44500002
+anchor_bottom = 0.565
+offset_left = -83.84
+offset_top = -0.2000122
+offset_right = -84.60004
+offset_bottom = 0.2000122
+grow_horizontal = 2
+grow_vertical = 2
+text = "Add Character WASD"
+script = ExtResource("6_opfnp")
+
+[node name="CharacterArrows" type="Node" parent="." unique_id=1882259352]
+
+[node name="Option1Arrows" type="Button" parent="CharacterArrows" unique_id=2049112481]
+visible = false
+offset_left = 544.0
+offset_top = 349.0
+offset_right = 597.0
+offset_bottom = 407.0
+flat = true
+script = ExtResource("15_ujyyl")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterArrows/Option1Arrows" unique_id=328972124]
+position = Vector2(25, 28.00001)
+scale = Vector2(2.3684213, 2.3684213)
+texture = SubResource("AtlasTexture_8dnnj")
+
+[node name="Option2Arrows" type="Button" parent="CharacterArrows" unique_id=1839539477]
+visible = false
+anchors_preset = -1
+anchor_right = 0.044000003
+anchor_bottom = 0.13800001
+offset_left = 609.0
+offset_top = 349.0
+offset_right = 604.68
+offset_bottom = 307.63998
+flat = true
+script = ExtResource("16_mkpwh")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterArrows/Option2Arrows" unique_id=939247053]
+position = Vector2(25, 33.00001)
+scale = Vector2(2.3749986, 2.3749986)
+texture = SubResource("AtlasTexture_m3bi6")
+
+[node name="Option3Arrows" type="Button" parent="CharacterArrows" unique_id=1084790667]
+visible = false
+anchors_preset = -1
+anchor_right = 0.22200002
+anchor_bottom = 0.5
+offset_left = 673.0
+offset_top = 349.0
+offset_right = 440.83997
+offset_bottom = 47.0
+toggle_mode = true
+flat = true
+script = ExtResource("17_4nkqq")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterArrows/Option3Arrows" unique_id=1901289468]
+position = Vector2(26, 30.000004)
+scale = Vector2(2.6125002, 2.6125002)
+texture = SubResource("AtlasTexture_wyh8j")
+
+[node name="Character_Select_Arrows" type="Button" parent="CharacterArrows" unique_id=1199312503]
+anchors_preset = -1
+anchor_left = 0.303
+anchor_top = 0.485
+anchor_right = 0.44500002
+anchor_bottom = 0.565
+offset_left = 156.16
+offset_top = -0.2000122
+offset_right = 155.39996
+offset_bottom = 0.2000122
+text = "Add Character Arrows"
+script = ExtResource("7_yhxw7")
+
+[node name="CharacterJIL" type="Node" parent="." unique_id=732185748]
+
+[node name="Option1JIL" type="Button" parent="CharacterJIL" unique_id=1510049119]
+visible = false
+offset_left = 793.0
+offset_top = 349.0
+offset_right = 846.0
+offset_bottom = 407.0
+flat = true
+script = ExtResource("18_ehtkc")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterJIL/Option1JIL" unique_id=1196316247]
+position = Vector2(25, 28.00001)
+scale = Vector2(2.3684213, 2.3684213)
+texture = SubResource("AtlasTexture_8dnnj")
+
+[node name="Option2JIL" type="Button" parent="CharacterJIL" unique_id=1529892809]
+visible = false
+anchors_preset = -1
+anchor_right = 0.044000003
+anchor_bottom = 0.13800001
+offset_left = 858.0
+offset_top = 349.0
+offset_right = 853.68
+offset_bottom = 307.63998
+flat = true
+script = ExtResource("19_6dk6o")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterJIL/Option2JIL" unique_id=948447666]
+position = Vector2(25, 33.00001)
+scale = Vector2(2.3749986, 2.3749986)
+texture = SubResource("AtlasTexture_m3bi6")
+
+[node name="Option3JIL" type="Button" parent="CharacterJIL" unique_id=1774806591]
+visible = false
+anchors_preset = -1
+anchor_right = 0.22200002
+anchor_bottom = 0.5
+offset_left = 922.0
+offset_top = 349.0
+offset_right = 689.83997
+offset_bottom = 47.0
+toggle_mode = true
+flat = true
+script = ExtResource("20_jr6u5")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterJIL/Option3JIL" unique_id=667675465]
+position = Vector2(26, 30.000004)
+scale = Vector2(2.6125002, 2.6125002)
+texture = SubResource("AtlasTexture_wyh8j")
+
+[node name="Character_Select_JIL" type="Button" parent="CharacterJIL" unique_id=705097041]
+anchors_preset = -1
+anchor_left = 0.303
+anchor_top = 0.485
+anchor_right = 0.44500002
+anchor_bottom = 0.565
+offset_left = 405.16
+offset_top = -0.2000122
+offset_right = 404.39996
+offset_bottom = 0.2000122
+text = "Add Character JIL"
+script = ExtResource("8_trj04")
+
+[connection signal="button_down" from="Button" to="Button" method="_on_button_down"]
+[connection signal="button_up" from="Button" to="Button" method="_on_button_up"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="CharacterWASD/Option1" to="CharacterWASD/Option1" method="_on_pressed"]
+[connection signal="pressed" from="CharacterWASD/Option2" to="CharacterWASD/Option2" method="_on_pressed"]
+[connection signal="pressed" from="CharacterWASD/Option3" to="CharacterWASD/Option3" method="_on_pressed"]
+[connection signal="pressed" from="CharacterWASD/Character_Select_WASD" to="CharacterWASD/Character_Select_WASD" method="_on_pressed"]
+[connection signal="pressed" from="CharacterArrows/Option1Arrows" to="CharacterArrows/Option1Arrows" method="_on_pressed"]
+[connection signal="pressed" from="CharacterArrows/Option2Arrows" to="CharacterArrows/Option2Arrows" method="_on_pressed"]
+[connection signal="pressed" from="CharacterArrows/Option3Arrows" to="CharacterArrows/Option3Arrows" method="_on_pressed"]
+[connection signal="pressed" from="CharacterArrows/Character_Select_Arrows" to="CharacterArrows/Character_Select_Arrows" method="_on_pressed"]
+[connection signal="pressed" from="CharacterJIL/Option1JIL" to="CharacterJIL/Option1JIL" method="_on_pressed"]
+[connection signal="pressed" from="CharacterJIL/Option2JIL" to="CharacterJIL/Option2JIL" method="_on_pressed"]
+[connection signal="pressed" from="CharacterJIL/Option3JIL" to="CharacterJIL/Option3JIL" method="_on_pressed"]
+[connection signal="pressed" from="CharacterJIL/Character_Select_JIL" to="CharacterJIL/Character_Select_JIL" method="_on_pressed"]
